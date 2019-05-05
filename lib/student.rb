@@ -49,8 +49,12 @@ def update
 end
 
 def self.create(name, grade)
-  student = Student.new(name, grade)
-  student.save
+  Student.new(name, grade).save
 end
+
+def self.new_from_db
+
+end
+
 
 end
