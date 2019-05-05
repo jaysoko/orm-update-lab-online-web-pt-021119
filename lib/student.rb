@@ -30,7 +30,7 @@ def self.drop_table
 end
 
 def save
-  if self.id
+  if self.id 
     self.update
   else
     sql = <<-SQL
@@ -41,7 +41,6 @@ def save
   #Saving an instance of the student object to the db
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
-
 end
 
 end
