@@ -65,6 +65,7 @@ def self.find_by_name(name)
     WHERE name = ?
     SQL
   row = DB[:conn].execute(sql,name)[0]
+  Student.new(row[1], row[2], row[0]
   binding.pry
 end
 
